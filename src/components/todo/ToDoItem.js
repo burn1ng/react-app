@@ -1,23 +1,30 @@
 import React from "react";
 
-// const ToDoItem = props => (
-//   <label className="todo__item">
-//     <input type="checkbox" checked={props.data.completed} />
-//     {props.data.text}
-//   </label>
-// );
-
-export default class ToDoItem extends React.Component {
-  render() {
-    return (
-      <label className="todo__item">
-        <input
-          type="checkbox"
-          checked={this.props.data.completed}
-          onChange={() => console.log("Changed!")}
-        />
-        {this.props.data.text}
-      </label>
-    );
-  }
+function ToDoItem(props) {
+  return (
+    <label className="todo__item">
+      <input
+        type="checkbox"
+        checked={props.data.completed}
+        onChange={() => props.handleChange(props.data.id)}
+      />
+      {props.data.text}
+    </label>
+  );
 }
+
+export default ToDoItem;
+// export default class ToDoItem extends React.Component {
+//   render() {
+//     return (
+//       <label className="todo__item">
+//         <input
+//           type="checkbox"
+//           checked={this.props.data.completed}
+//           onChange={event => this.props.handleChange(this.props.data.id)}
+//         />
+//         {this.props.data.text}
+//       </label>
+//     );
+//   }
+// }
