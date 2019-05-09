@@ -31,6 +31,11 @@ export default class App extends Component {
         <h3>
           <font color="#3AC1EF">▍{this.state.age} years old</font>
         </h3>
+        <img
+          onMouseOver={() => console.log("Hovered!")}
+          src="https://www.fillmurray.com/200/100"
+        />
+        <button onClick={() => console.log("I was clicked!")}>Click me</button>
         <h1>Is state important to know? {this.state.answer}</h1>
         <TestChild testAnswer={this.state.answer} />
         <MyInfo />
