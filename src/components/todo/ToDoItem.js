@@ -11,7 +11,11 @@ export default class ToDoItem extends React.Component {
   render() {
     return (
       <label className="todo__item">
-        <input type="checkbox" checked={this.props.data.completed} />
+        <input
+          type="checkbox"
+          checked={this.props.data.completed}
+          onChange={() => console.log("Changed!")}
+        />
         {this.props.data.text}
       </label>
     );
