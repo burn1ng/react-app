@@ -15,6 +15,8 @@ export default class App extends Component {
     super();
 
     this.state = {
+      name: "Andrewww",
+      age: 26,
       answer: "Yes"
     };
   }
@@ -25,6 +27,10 @@ export default class App extends Component {
         <Navbar />
         <Header username="Andrei" />
         <Greeting />
+        <h1>{this.state.name}</h1>
+        <h3>
+          <font color="#3AC1EF">▍{this.state.age} years old</font>
+        </h3>
         <h1>Is state important to know? {this.state.answer}</h1>
         <TestChild testAnswer={this.state.answer} />
         <MyInfo />
